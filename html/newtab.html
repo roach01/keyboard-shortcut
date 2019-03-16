@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>快捷键盘导航</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <style>
+        *, *:before, *:after {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            background: #aa4b6b;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+            height: 300px;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .row {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .key {
+            display: flex;
+            width: 55px;
+            height: 55px;
+            margin-left: 20px;
+            background-color: rgba(25, 26, 31, 1);
+            color: rgba(177, 180, 182, 1);
+            -webkit-box-shadow: 0 2px 2px 2px rgba(25, 26, 31, 1);
+            -moz-box-shadow: 0 2px 2px 2px rgba(25, 26, 31, 1);
+            box-shadow: 0 2px 2px 2px rgba(25, 26, 31, 1);
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        .key span{
+            font-size: 16px;
+        }
+
+        .size{
+            width: 20px;
+            height: 20px;
+            position: absolute;
+        }
+        .favicon{
+            left: 1px;
+            bottom: 1px;
+        }
+        .edit{
+            cursor: pointer;
+            display: none;
+            left: 1px;
+            top: 1px;
+        }
+        .delete{
+            cursor: pointer;
+            display: none;
+            right: 1px;
+            top: 1px;
+        }
+        .key:hover .edit,.key:hover .delete{
+            display: block;
+        }
+        @media screen and (min-width: 1281px) {
+            .key{
+                width: 70px;
+                height: 70px;
+                margin-left: 30px;
+            }
+            .container{
+                height: 400px;
+            }
+            .size{
+                width: 25px;
+                height: 25px;
+                position: absolute;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div id="1" class="key"></div>
+        <div id="2" class="key"></div>
+        <div id="3" class="key"></div>
+        <div id="4" class="key"></div>
+        <div id="5" class="key"></div>
+        <div id="6" class="key"></div>
+        <div id="7" class="key"></div>
+        <div id="8" class="key"></div>
+        <div id="9" class="key"></div>
+        <div id="0" class="key"></div>
+    </div>
+    <div class="row">
+        <div id="Q" class="key"></div>
+        <div id="W" class="key"></div>
+        <div id="E" class="key"></div>
+        <div id="R" class="key"></div>
+        <div id="T" class="key"></div>
+        <div id="Y" class="key"></div>
+        <div id="U" class="key"></div>
+        <div id="I" class="key"></div>
+        <div id="O" class="key"></div>
+        <div id="P" class="key"></div>
+    </div>
+    <div class="row">
+        <div id="A" class="key"></div>
+        <div id="S" class="key"></div>
+        <div id="D" class="key"></div>
+        <div id="F" class="key"></div>
+        <div id="G" class="key"></div>
+        <div id="H" class="key"></div>
+        <div id="J" class="key"></div>
+        <div id="K" class="key"></div>
+        <div id="L" class="key"></div>
+    </div>
+    <div class="row">
+        <div id="Z" class="key"></div>
+        <div id="X" class="key"></div>
+        <div id="C" class="key"></div>
+        <div id="V" class="key"></div>
+        <div id="B" class="key"></div>
+        <div id="N" class="key"></div>
+        <div id="M" class="key"></div>
+    </div>
+</div>
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/newtab.js"></script>
+</html>
